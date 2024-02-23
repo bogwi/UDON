@@ -123,7 +123,7 @@ After compilation you can pass the number of vertices and edges per vertex to ru
 ```
 ./a.out 10000 20
 ```
-means 10k vertices with an average of 20 edges each. The are the default parameters.
+means 10k vertices with an average of 20 edges each. These are the default parameters.
 The code and the bench have been tested for leaks with Valgrind.
 
 #### Results
