@@ -1598,12 +1598,12 @@ class UDON {
                         codeLine = __LINE__ + 1;
                         if (vertexCount() == 0)
                                 {cerr << "GRAPH:ERROR -> empty graph: code line: " << codeLine << endl;}
-
-                        codeLine = __LINE__ + 1;
+ 
                         static_assert(graphType == directed,
                                       "This implementation of Topological Sort works only on directed graphs!");
 
                         // possible run time protection
+                        codeLine = __LINE__ + 1; 
                         if (graphType != directed)
                                 {cerr << "GRAPH:ERROR -> This implementation of Topological Sort works only on directed graphs!" 
                                         << codeLine << endl;
@@ -1678,12 +1678,12 @@ class UDON {
                         if (vertexCount() == 0)
                                 {cerr << "GRAPH:ERROR -> empty graph: code line: " << codeLine << endl;
                                 EXIT_FAILURE;}
-                        codeLine = __LINE__ + 1;
-
+                        
                         static_assert(graphType == undirected && graphMode == weighted,
                                       "Prim-Jarnik algorithm works only on " 
                                         "undirected weighted graphs!");
 
+                        codeLine = __LINE__ + 1;
                         if (graphType != undirected && graphMode != weighted)
                                 {cerr << "GRAPH:ERROR -> Prim-Jarnik MST algorithm works only on "
                                         "undirected weighted graphs: code line: " << codeLine << endl;
@@ -1757,12 +1757,12 @@ class UDON {
                         if (vertexCount() == 0)
                                 {cerr << "GRAPH:ERROR -> empty graph: code line: " << codeLine << endl;
                                 EXIT_FAILURE;}
-                        codeLine = __LINE__ + 1;
 
                         static_assert(graphType == undirected && graphMode == weighted,
                                       "Kruskal algorithm works only on " 
                                         "undirected weighted graphs!");
 
+                        codeLine = __LINE__ + 1;
                         if (graphType != undirected && graphMode != weighted)
                                 {cerr << "GRAPH:ERROR -> Kruskal MST algorithm works only on " 
                                         "undirected weighted graphs: code line: " << codeLine << endl;
